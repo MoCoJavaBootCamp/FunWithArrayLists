@@ -39,8 +39,12 @@ public class ArrayLists {
             System.out.println("Enter another color or type '0' to continue.");
             ID = input.nextInt();
             color = input.nextLine();
+            if (ID == 0) {
+                break;
+            }
             colors.add(color);
             System.out.println(colors);
+
         } while (ID != 0);
 
         do {
@@ -55,6 +59,7 @@ public class ArrayLists {
                     System.out.println("The color at index 1 is " + colors.get(1));
                     break;
                 case 2:
+                    input.nextLine();
                     System.out.println("Enter a color:");
                     color = input.nextLine();
                     colors.add(color);
